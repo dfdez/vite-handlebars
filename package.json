@@ -1,0 +1,17 @@
+{
+  "name": "vite",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "dfdez",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.7",
+    "vite": "^2.9.7",
+    "vite-plugin-hbs": "file:plugins/vite-plugin-hbs"
+  }
+}

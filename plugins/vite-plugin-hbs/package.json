@@ -1,0 +1,26 @@
+{
+  "name": "vite-plugin-hbs",
+  "version": "1.0.0",
+  "type": "module",
+  "source": "src/index.js",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "author": "dfdez",
+  "license": "MIT",
+  "scripts": {
+    "build": "microbundle -f es --no-compress",
+    "dev": "microbundle watch -f es --no-compress",
+    "publish": "npm run build && npm version"
+  },
+  "dependencies": {
+    "globby": "^13.1.1",
+    "handlebars": "^4.7.7"
+  },
+  "peerDependencies": {
+    "vite": "^2.9.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "microbundle": "^0.15.0"
+  }
+}
