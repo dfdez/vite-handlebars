@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "handlebars": "^4.7.7",
-    "vite": "^2.9.7",
+    "handlebars": "^4.7.8",
+    "vite": "^5.4.11",
     "vite-plugin-hbs": "file:plugins/vite-plugin-hbs"
   }
 }

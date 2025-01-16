@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-hbs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "source": "src/index.js",
   "module": "dist/index.js",
@@ -13,14 +13,14 @@
     "publish": "npm run build && npm version"
   },
   "dependencies": {
-    "globby": "^13.1.1",
-    "handlebars": "^4.7.7"
+    "globby": "^14.0.2",
+    "handlebars": "^4.7.8"
   },
   "peerDependencies": {
-    "vite": "^2.9.7"
+    "vite": "^5.4.11"
   },
   "devDependencies": {
-    "eslint": "^8.15.0",
-    "microbundle": "^0.15.0"
+    "eslint": "^9.15.0",
+    "microbundle": "^0.15.1"
   }
 }
