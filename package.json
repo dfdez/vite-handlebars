@@ -7,11 +7,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.4.0",
     "handlebars": "^4.7.8",
+    "jsdom": "^28.1.0",
+    "prettier": "^3.8.1",
     "vite": "^5.4.11",
-    "vite-plugin-hbs": "file:plugins/vite-plugin-hbs"
+    "vite-plugin-hbs": "file:plugins/vite-plugin-hbs",
+    "vitest": "^4.0.18"
   }
 }
