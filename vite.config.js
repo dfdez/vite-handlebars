@@ -7,6 +7,11 @@ export default defineConfig({
   plugins: [hbs(hbsConfig)],
   root: 'src',
   build: {
-    outDir: '../dist'
-  }
-})
+    outDir: '../dist',
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    include: ['../tests/**/*.test.js'],
+  },
+});

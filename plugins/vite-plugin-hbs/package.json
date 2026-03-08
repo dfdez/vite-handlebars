@@ -1,26 +1,56 @@
 {
   "name": "vite-plugin-hbs",
   "version": "2.0.0",
-  "type": "module",
-  "source": "src/index.js",
-  "module": "dist/index.js",
-  "main": "dist/index.js",
+  "description": "Handlebars template engine plugin for Vite",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "handlebars",
+    "hbs",
+    "templates"
+  ],
   "author": "dfdez",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfdez/vite-handlebars"
+  },
+  "homepage": "https://github.com/dfdez/vite-handlebars#readme",
+  "type": "module",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
     "build": "microbundle -f es --no-compress",
     "dev": "microbundle watch -f es --no-compress",
-    "publish": "npm run build && npm version"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "globby": "^14.0.2",
     "handlebars": "^4.7.8"
   },
   "peerDependencies": {
-    "vite": "^5.4.11"
+    "vite": ">=4.0.0"
   },
   "devDependencies": {
     "eslint": "^9.15.0",
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "vitest": "^4.0.18"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

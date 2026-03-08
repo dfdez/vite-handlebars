@@ -8,7 +8,7 @@ import { addWatch } from './watch.js';
 
 export const instances = {};
 
-export async function createInstance(config, file, { rollup, emit } = {}) {
+export const createInstance = async (config, file, { rollup, emit } = {}) => {
   const options = config[file];
 
   const instance = createInstanceObject(options, { rollup, path: path.resolve(file) });
@@ -18,14 +18,20 @@ export async function createInstance(config, file, { rollup, emit } = {}) {
   compile(instance, { emit });
 
   addWatch(instance, instance.path);
-}
+};
 
-export function createInstanceObject(options, { rollup, path } = {}) {
-  return instances[path] = { ...options, rollup, path, handlebars: Handlebars.create(), registered: { helpers: {} } };
-}
+export const createInstanceObject = (options, { rollup, path } = {}) => {
+  return (instances[path] = {
+    ...options,
+    rollup,
+    path,
+    handlebars: Handlebars.create(),
+    registered: { helpers: {} },
+  });
+};
 
 export default {
   instances,
   createInstance,
-  createInstanceObject
+  createInstanceObject,
 };
